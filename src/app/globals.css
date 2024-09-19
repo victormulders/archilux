@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-header {
+    @apply text-3xl pb-12;
+}
+
+.primary-button {
+    @apply text-white font-semibold transition-colors rounded-full bg-primary-500 px-4 md:px-6 py-2 md:py-3 border-0 border-solid;
+}
+
+.primary-button:hover {
+    @apply bg-primary-400 text-white;
+}
+
+.secondary-button {
+    @apply text-gray-200 font-semibold transition-colors rounded-full bg-transparent px-4 md:px-6 py-2 md:py-4 border border-solid border-gray-200;
+}
+
+.secondary-button:hover {
+    @apply bg-gray-200/20 text-white;
+}
+
+p {
+    @apply max-w-2xl text-base md:text-lg text-gray-600 break-words;
+}
+
+h1 {
+    @apply mt-2 break-words tracking-wide text-4xl md:text-5xl font-semibold text-balance;
+}
+
+h2 {
+    @apply mt-2 break-words text-3xl md:text-4xl font-semibold;
+}
+
+h3 {
+    @apply mt-2 break-words text-2xl md:text-3xl font-semibold;
+}
+
+h4 {
+    @apply mt-2 break-words text-xl md:text-2xl font-semibold;
+}
