@@ -36,7 +36,7 @@ const Navbar = () => {
       }
 
       if (latest > 100) {
-        setScrollingUp(scrollY.getPrevious() > latest);
+        setScrollingUp(scrollY.getPrevious()! > latest);
       }
     }
   });
