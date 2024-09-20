@@ -13,8 +13,6 @@ import HorizontalScroll from "@/app/components/horizontal-scrolling/HorizontalSc
 import VideoScroll from "@/app/components/video-scroll/VideoScroll";
 import ClientFeedbackSection from "@/app/components/client-feedback-section/ClientFeedbackSection";
 
-//TODO scroll paralax thingy within room with text like 'More than just a room' bla bla
-
 export default function Home() {
   return (
     <div>
@@ -213,7 +211,7 @@ export default function Home() {
                   houses into homes, one design at a time.
                 </p>
                 {/*<HeroContent />*/}
-                <div className="flex flex-col items-start gap-4 sm:items-center sm:flex-row">
+                <div className="flex gap-4 flex-wrap">
                   <Link
                     href={"/contact"}
                     className="primary-button arrow-button flex w-fit items-center"
@@ -268,9 +266,10 @@ export default function Home() {
       </main>
 
       <footer className="bg-darkTheme">
-        <div className="container py-20 md:py-28 flex flex-col gap-12">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+        <div className="container py-20 md:py-28 flex flex-col gap-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <SectionTitle
+                className="max-w-sm"
               title={"Ready to build your dream home?"}
               pretitle={"Free Consultation"}
               isLight={false}
@@ -283,7 +282,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex w-full flex-col md:flex-row gap-8 md:gap-12">
+          <div className="flex w-full flex-col md:flex-row gap-8 md:gap-16">
             <div className="flex w-full md:w-auto flex-col gap-4">
               <div className="text-gray-100 flex items-center font-semibold text-2xl">
                 <HomeIcon className="mr-2 h-8 w-8" />

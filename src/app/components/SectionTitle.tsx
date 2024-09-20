@@ -23,7 +23,7 @@ const SectionTitle = ({
     >
       {pretitle && (
         <div
-          className={`text-lg font-extrabold ${isLight ? "text-primary-500" : "text-primary-300"} uppercase`}
+          className={`text-lg font-extrabold ${isLight ? "text-primary-500" : "text-primary-200"} uppercase`}
         >
           {pretitle}
         </div>
@@ -31,7 +31,7 @@ const SectionTitle = ({
 
       {title && (
         <h2
-          className={`max-w-2xl text-3xl font-semibold leading-tight ${isLight ? "text-darkTheme" : "text-gray-300"} lg:text-4xl`}
+          className={`max-w-2xl text-3xl font-semibold leading-tight ${isLight ? "text-darkTheme" : "text-gray-100"} lg:text-4xl`}
         >
           {title}
         </h2>
