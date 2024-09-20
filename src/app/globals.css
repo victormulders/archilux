@@ -15,7 +15,7 @@
 }
 
 .secondary-button {
-    @apply text-gray-200 font-semibold transition-colors rounded-full bg-transparent px-4 md:px-6 py-2 md:py-4 border border-solid border-gray-200;
+    @apply text-gray-200 font-semibold transition-colors rounded-full bg-transparent px-4 md:px-6 py-2 md:py-3 outline outline-1 outline-gray-200;
 }
 
 .secondary-button:hover {
@@ -40,4 +40,8 @@ h3 {
 
 h4 {
     @apply mt-2 break-words text-xl md:text-2xl font-semibold;
+}
+
+hr {
+    @apply border-grayTheme
 }

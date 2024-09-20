@@ -39,7 +39,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-7xl font-medium text-white mt-0">
                 Turning Houses into Homes, One Design at a Time
               </h1>
-              <p className="text-xl leading-normal text-gray-100 lg:text-xl xl:text-2xl">
+              <p className="text-xl leading-normal text-gray-200 lg:text-xl xl:text-2xl">
                 With every project we undertake, we are committed to turning
                 houses into homes, one design at a time.
               </p>
@@ -49,16 +49,16 @@ export default function Home() {
                   href={"/contact"}
                   className="primary-button arrow-button flex w-fit items-center"
                 >
-                  Explore Our Projects <ArrowUpRightIcon className="ml-2 h-6 w-6" />
+                  Explore Our Projects{" "}
+                  <ArrowUpRightIcon className="ml-2 h-6 w-6" />
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="container py-20">
+        <section className="container flex flex-col md:flex-row gap-8 py-20 md:py-28">
           <SectionTitle
-            className="pb-12"
             title={"Architecture Interior."}
             pretitle={"Categories"}
           />
@@ -106,7 +106,7 @@ export default function Home() {
         {/*</div>*/}
         <HorizontalScroll />
 
-        <section className="container py-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <section className="container py-20 md:py-28 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="flex flex-col gap-6">
             <div className="text-6xl text-primary-500 font-semibold">8K</div>
             <div className="flex flex-col gap-2">
@@ -153,7 +153,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container flex flex-col md:flex-row py-20 gap-8 md:gap-24 items-center">
+        <section className="container flex flex-col md:flex-row py-20 md:py-28 gap-8 md:gap-16 items-center">
           <Image
             className="flex-1 rounded-lg h-56 md:h-96 object-cover"
             src={RoomTwo}
@@ -177,7 +177,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container flex flex-col py-20 gap-8">
+        <section className="container flex flex-col md:flex-row gap-8 py-20 md:py-28">
           <SectionTitle title={"Interior Design Gallery"} pretitle="Gallery" />
           <p>
             Develop a concept or theme that will guide the design process. This
@@ -203,32 +203,30 @@ export default function Home() {
                 priority
               />
             </div>
-            <div className="relative z-1 flex flex-wrap flex-row-reverse py-32">
-              <div className="p-0 md:p-12 rounded-3xl flex items-center w-full lg:w-1/2">
-                <div className="container max-w-2xl flex flex-col gap-4">
-                  <h1 className="text-4xl font-semibold text-white mt-0">
-                    Turning Houses into Homes, One Design at a Time.
-                  </h1>
-                  <p className="py-4 text-xl leading-normal text-gray-100 lg:text-xl xl:text-2xl">
-                    With every project we undertake, we are committed to turning
-                    houses into homes, one design at a time.
-                  </p>
-                  {/*<HeroContent />*/}
-                  <div className="flex flex-col items-start gap-4 sm:gap-2 sm:items-center sm:flex-row">
-                    <Link
-                      href={"/contact"}
-                      className="primary-button arrow-button flex w-fit items-center"
-                    >
-                      Get in touch <ArrowUpRightIcon className="ml-2 h-6 w-6" />
-                    </Link>
-                    <Link
-                      href={"/contact"}
-                      className="secondary-button arrow-button flex w-fit items-center"
-                    >
-                      Call us +31 6 1311 0490{" "}
-                      <ArrowUpRightIcon className="ml-2 h-6 w-6" />
-                    </Link>
-                  </div>
+            <div className="relative container flex flex-col md:flex-row gap-8 py-20 z-1 py-32 md:pb-[30rem]">
+              <h1 className="text-4xl font-semibold text-white mt-0">
+                Turning Houses into Homes, One Design at a Time
+              </h1>
+              <div className="flex flex-col gap-8">
+                <p className="text-xl leading-normal text-gray-200 lg:text-xl xl:text-2xl">
+                  With every project we undertake, we are committed to turning
+                  houses into homes, one design at a time.
+                </p>
+                {/*<HeroContent />*/}
+                <div className="flex flex-col items-start gap-4 sm:items-center sm:flex-row">
+                  <Link
+                    href={"/contact"}
+                    className="primary-button arrow-button flex w-fit items-center"
+                  >
+                    Get in touch <ArrowUpRightIcon className="ml-2 h-6 w-6" />
+                  </Link>
+                  <Link
+                    href={"/contact"}
+                    className="secondary-button arrow-button flex w-fit items-center"
+                  >
+                    Call us +31 6 1311 0490{" "}
+                    <ArrowUpRightIcon className="ml-2 h-6 w-6" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -236,16 +234,17 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="container py-20">
-            <h2 className="max-w-xl">
+          <div className="container pt-20 md:pt-28">
+            <h2 className="max-w-xl mb-4">
               Explore client feedback on our latest project.
             </h2>
+            <hr />
           </div>
 
           <ClientFeedbackSection />
         </section>
 
-        <section className="flex flex-col md:flex-row container gap-16 md:gap-32 py-20">
+        <section className="flex flex-col md:flex-row container gap-16 md:gap-32 py-20 md:py-28">
           <div className="flex flex-col gap-8">
             <SectionTitle
               title={"Still Have Any Questions?"}
@@ -269,7 +268,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-darkTheme">
-        <div className="container py-20 flex flex-col gap-12">
+        <div className="container py-20 md:py-28 flex flex-col gap-12">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
             <SectionTitle
               title={"Ready to build your dream home?"}
