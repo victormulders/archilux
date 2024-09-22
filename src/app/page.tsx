@@ -183,7 +183,7 @@ export default function Home() {
             architecture, or a specific design style.
           </p>
         </section>
-        {/*<ZoomParallax />*/}
+        <ZoomParallax />
 
         <section>
           <div
