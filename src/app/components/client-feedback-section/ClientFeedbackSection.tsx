@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import LivingRoom from "/public/img/living-room.png";
+import LivingRoom from "/public/img/living-room.jpg";
 import RoomOne from "/public/img/room-image-1.webp";
 import RoomTwo from "/public/img/room-image-2.jpeg";
 import RoomFive from "/public/img/living-room-5.jpg";

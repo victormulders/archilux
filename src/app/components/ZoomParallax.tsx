@@ -2,7 +2,7 @@
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './styles.module.scss';
-import LivingRoom from '/public/img/living-room.png';
+import LivingRoom from '/public/img/living-room.jpg';
 import RoomOne from '/public/img/room-image-1.webp';
 import RoomTwo from '/public/img/room-image-2.jpeg';
 import RoomFour from '/public/img/living-room-4.jpg';

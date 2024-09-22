@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "@/app/components/SectionTitle";
-import LivingRoom from "/public/img/living-room.png";
+import LivingRoom from "/public/img/living-room.jpg";
 import RoomTwo from "/public/img/room-image-2.jpeg";
 import RoomFive from "/public/img/living-room-5.jpg";
 import Link from "next/link";
