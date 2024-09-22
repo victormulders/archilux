@@ -1,5 +1,5 @@
 .container{
-  height: 200vh;
+  @apply h-[150vh] md:h-[200vh];
   position: relative;
 
   .title {
