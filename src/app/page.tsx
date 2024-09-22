@@ -102,7 +102,7 @@ export default function Home() {
         {/*    </div>*/}
         {/*  </div>*/}
         {/*</div>*/}
-        {/*<HorizontalScroll />*/}
+        <HorizontalScroll />
 
         <section className="container py-20 md:py-28 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="flex flex-col gap-6">
@@ -183,7 +183,7 @@ export default function Home() {
             architecture, or a specific design style.
           </p>
         </section>
-        <ZoomParallax />
+        {/*<ZoomParallax />*/}
 
         <section>
           <div
