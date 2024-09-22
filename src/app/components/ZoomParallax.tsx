@@ -58,7 +58,7 @@ export default function ZoomParallax() {
     ]
 
     return (
-      <div ref={container} className={styles.container}>
+      <div ref={container} className={styles.zoomcontainer}>
         <div className={styles.sticky}>
           {pictures.map(({ src, scale }, index) => {
             return (
