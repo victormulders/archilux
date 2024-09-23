@@ -18,12 +18,9 @@ export default function Home() {
       <main>
         <section className="h-[85svh]">
           <div
-            className="relative w-full h-full"
-            style={{
-              clipPath: "inset(0 0 0 0)",
-            }}
+            className="relative w-full h-full lg:[clip-path:inset(0_0_0_0)]"
           >
-            <div className="fixed h-full w-full left-0 top-0">
+            <div className="relative lg:fixed h-full w-full left-0 top-0">
               <Image
                 fill
                 className="object-center object-cover pointer-events-none brightness-75"
@@ -32,7 +29,7 @@ export default function Home() {
                 priority
               />
             </div>
-            <div className="relative z-1 container flex flex-col gap-4 md:gap-8 items-center justify-center h-full text-center">
+            <div className="absolute lg:relative top-0 z-1 container flex flex-col gap-4 md:gap-8 items-center justify-center h-full text-center">
               <h1 className="text-4xl md:text-7xl font-medium text-white mt-0">
                 Turning Houses into Homes, One Design at a Time
               </h1>
@@ -184,14 +181,11 @@ export default function Home() {
         </section>
         <ZoomParallax />
 
-        <section>
+        <section className="h-[85svh] lg:h-full">
           <div
-            className="relative w-full h-full"
-            style={{
-              clipPath: "inset(0 0 0 0)",
-            }}
+            className="relative w-full h-full lg:[clip-path:inset(0_0_0_0)]"
           >
-            <div className="fixed h-full w-full left-0 top-0">
+            <div className="relative lg:fixed h-full w-full left-0 top-0">
               <Image
                 fill
                 className="rounded-none object-center object-cover pointer-events-none brightness-50"
@@ -200,10 +194,10 @@ export default function Home() {
                 priority
               />
             </div>
-            <div className="relative container flex flex-col md:flex-row gap-8 py-20 z-1 py-32 md:pb-[30rem]">
-              <h1 className="text-4xl font-semibold text-white mt-0">
+            <div className="absolute lg:relative top-0 z-1 container flex flex-col md:flex-row gap-8 py-20 z-1 md:pb-[30rem]">
+              <h2 className="text-4xl font-semibold text-white mt-0">
                 Turning Houses into Homes, One Design at a Time
-              </h1>
+              </h2>
               <div className="flex flex-col gap-8">
                 <p className="text-xl leading-normal text-gray-200 lg:text-xl xl:text-2xl">
                   With every project we undertake, we are committed to turning
