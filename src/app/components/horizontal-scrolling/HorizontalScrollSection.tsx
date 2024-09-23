@@ -45,6 +45,7 @@ const Card = ({
         alt={""}
         className="rounded-lg h-[30rem] object-cover"
         src={url}
+        loading="eager"
       />
       <div className="text-xl uppercase font-semibold text-gray-700">
         {title}
