@@ -16,43 +16,43 @@ export default function Home() {
   return (
     <div>
       <main>
-        <section className="h-[85svh]">
-          <div
-            className="relative w-full h-full"
-            style={{
-              clipPath: "inset(0 0 0 0)",
-            }}
-          >
-            <div className="fixed h-full w-full left-0 top-0">
-              <Image
-                fill
-                className="object-center object-cover pointer-events-none brightness-75"
-                src={LivingRoom}
-                alt={"Living room"}
-                priority
-              />
-            </div>
-            <div className="relative z-1 container flex flex-col gap-4 md:gap-8 items-center justify-center h-full text-center">
-              <h1 className="text-4xl md:text-7xl font-medium text-white mt-0">
-                Turning Houses into Homes, One Design at a Time
-              </h1>
-              <p className="text-xl leading-normal text-gray-200 lg:text-xl xl:text-2xl">
-                With every project we undertake, we are committed to turning
-                houses into homes, one design at a time.
-              </p>
-              {/*<HeroContent />*/}
-              <div className="flex flex-col items-start gap-4 sm:gap-2 sm:items-center sm:flex-row">
-                <Link
-                  href={"/contact"}
-                  className="primary-button arrow-button flex w-fit items-center"
-                >
-                  Explore Our Projects{" "}
-                  <ArrowUpRightIcon className="ml-2 h-6 w-6" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/*<section className="h-[85svh]">*/}
+        {/*  <div*/}
+        {/*    className="relative w-full h-full"*/}
+        {/*    style={{*/}
+        {/*      clipPath: "inset(0 0 0 0)",*/}
+        {/*    }}*/}
+        {/*  >*/}
+        {/*    <div className="fixed h-full w-full left-0 top-0">*/}
+        {/*      <Image*/}
+        {/*        fill*/}
+        {/*        className="object-center object-cover pointer-events-none brightness-75"*/}
+        {/*        src={LivingRoom}*/}
+        {/*        alt={"Living room"}*/}
+        {/*        priority*/}
+        {/*      />*/}
+        {/*    </div>*/}
+        {/*    <div className="relative z-1 container flex flex-col gap-4 md:gap-8 items-center justify-center h-full text-center">*/}
+        {/*      <h1 className="text-4xl md:text-7xl font-medium text-white mt-0">*/}
+        {/*        Turning Houses into Homes, One Design at a Time*/}
+        {/*      </h1>*/}
+        {/*      <p className="text-xl leading-normal text-gray-200 lg:text-xl xl:text-2xl">*/}
+        {/*        With every project we undertake, we are committed to turning*/}
+        {/*        houses into homes, one design at a time.*/}
+        {/*      </p>*/}
+        {/*      /!*<HeroContent />*!/*/}
+        {/*      <div className="flex flex-col items-start gap-4 sm:gap-2 sm:items-center sm:flex-row">*/}
+        {/*        <Link*/}
+        {/*          href={"/contact"}*/}
+        {/*          className="primary-button arrow-button flex w-fit items-center"*/}
+        {/*        >*/}
+        {/*          Explore Our Projects{" "}*/}
+        {/*          <ArrowUpRightIcon className="ml-2 h-6 w-6" />*/}
+        {/*        </Link>*/}
+        {/*      </div>*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</section>*/}
 
         <section className="container flex flex-col md:flex-row gap-8 py-20 md:py-28">
           <SectionTitle
@@ -68,39 +68,6 @@ export default function Home() {
           </p>
         </section>
 
-        {/*//TODO hier sideways scroll op zetten?*/}
-        {/*<div className="flex w-full overflow-x-auto scroll-x snap-x">*/}
-        {/*  <div className="flex flex-col items-center gap-2 w-80 snap-center shrink-0 px-4">*/}
-        {/*    <Image*/}
-        {/*      alt={""}*/}
-        {/*      className="rounded-lg h-[30rem] w-80 object-cover"*/}
-        {/*      src={RoomOne}*/}
-        {/*    />*/}
-        {/*    <div className="text-xl uppercase font-semibold text-gray-500">*/}
-        {/*      Classic*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*  <div className="flex flex-col items-center gap-2 w-80 snap-center shrink-0 px-4">*/}
-        {/*    <Image*/}
-        {/*      src={RoomTwo}*/}
-        {/*      alt={""}*/}
-        {/*      className="rounded-lg h-[30rem] w-80 object-cover"*/}
-        {/*    />*/}
-        {/*    <div className="text-xl uppercase font-semibold text-gray-500">*/}
-        {/*      Modern*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*  <div className="flex flex-col items-center gap-2 w-80 snap-center shrink-0 px-4">*/}
-        {/*    <Image*/}
-        {/*      alt={""}*/}
-        {/*      className="rounded-lg h-[30rem] w-80 object-cover"*/}
-        {/*      src={LivingRoom}*/}
-        {/*    />*/}
-        {/*    <div className="text-xl uppercase font-semibold text-gray-500">*/}
-        {/*      Minimalism*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
         <HorizontalScroll />
 
         <section className="container py-20 md:py-28 grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -184,51 +151,6 @@ export default function Home() {
         </section>
         <ZoomParallax />
 
-        <section>
-          <div
-            className="relative w-full h-full"
-            style={{
-              clipPath: "inset(0 0 0 0)",
-            }}
-          >
-            <div className="fixed h-full w-full left-0 top-0">
-              <Image
-                fill
-                className="rounded-none object-center object-cover pointer-events-none brightness-50"
-                src={RoomFive}
-                alt={"Lesauto interieur"}
-                priority
-              />
-            </div>
-            <div className="relative container flex flex-col md:flex-row gap-8 py-20 z-1 py-32 md:pb-[30rem]">
-              <h1 className="text-4xl font-semibold text-white mt-0">
-                Turning Houses into Homes, One Design at a Time
-              </h1>
-              <div className="flex flex-col gap-8">
-                <p className="text-xl leading-normal text-gray-200 lg:text-xl xl:text-2xl">
-                  With every project we undertake, we are committed to turning
-                  houses into homes, one design at a time.
-                </p>
-                {/*<HeroContent />*/}
-                <div className="flex gap-4 flex-wrap">
-                  <Link
-                    href={"/contact"}
-                    className="primary-button arrow-button flex w-fit items-center"
-                  >
-                    Get in touch <ArrowUpRightIcon className="ml-2 h-6 w-6" />
-                  </Link>
-                  <Link
-                    href={"/contact"}
-                    className="secondary-button arrow-button flex w-fit items-center"
-                  >
-                    Call us +31 6 1311 0490{" "}
-                    <ArrowUpRightIcon className="ml-2 h-6 w-6" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section>
           <div className="container pt-20 md:pt-28">
