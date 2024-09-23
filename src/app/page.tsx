@@ -9,9 +9,12 @@ import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import Faq from "@/app/components/Faq";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { Input } from "@headlessui/react";
-import HorizontalScroll from "@/app/components/horizontal-scrolling/HorizontalScrollSection";
+
 import VideoScroll from "@/app/components/video-scroll/VideoScroll";
 import ClientFeedbackSection from "@/app/components/client-feedback-section/ClientFeedbackSection";
+import dynamic from 'next/dynamic';
+
+const HorizontalScroll = dynamic(() => import("./components/horizontal-scrolling/HorizontalScrollSection"), {ssr: false})
 
 export default function Home() {
   return (
@@ -242,7 +245,7 @@ export default function Home() {
           <ClientFeedbackSection />
         </section>
 
-        <section className="flex flex-col md:flex-row container gap-16 md:gap-32 py-20 md:py-28">
+        <section className="flex flex-col lg:flex-row container gap-16 lg:gap-32 py-20 lg:py-28">
           <div className="flex flex-col gap-8">
             <SectionTitle
               title={"Still Have Any Questions?"}
