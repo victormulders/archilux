@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div>
       <main>
-        <section className="h-[85svh]">
+        <section className="h-screen lg:h-[85svh]">
           <div
             className="relative w-full h-full lg:[clip-path:inset(0_0_0_0)]"
           >
@@ -181,7 +181,7 @@ export default function Home() {
         </section>
         <ZoomParallax />
 
-        <section className="h-[85svh] lg:h-full">
+        <section className="h-screen lg:h-full">
           <div
             className="relative w-full h-full lg:[clip-path:inset(0_0_0_0)]"
           >
