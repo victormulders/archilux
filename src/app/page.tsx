@@ -10,7 +10,6 @@ import Faq from "@/app/components/Faq";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { Input } from "@headlessui/react";
 import HorizontalScroll from "@/app/components/horizontal-scrolling/HorizontalScrollSection";
-import VideoScroll from "@/app/components/video-scroll/VideoScroll";
 import ClientFeedbackSection from "@/app/components/client-feedback-section/ClientFeedbackSection";
 
 export default function Home() {
