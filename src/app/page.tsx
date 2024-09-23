@@ -255,7 +255,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="w-full">
-            {/*<Faq />*/}
+            <Faq />
           </div>
         </section>
 
