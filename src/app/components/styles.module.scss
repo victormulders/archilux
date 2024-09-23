@@ -1,6 +1,7 @@
 .zoomcontainer{
   height: 200vh;
   position: relative;
+  will-change: transform;
 
   .title {
     @apply text-white text-sm md:text-2xl absolute w-full font-semibold text-balance;
