@@ -64,7 +64,7 @@ export default function ZoomParallax() {
             return (
               <motion.div key={index} style={{ scale }} className={styles.el}>
                 <div className={styles.imageContainer}>
-                  <Image src={src} fill alt="image" placeholder="blur" loading="eager" />
+                  <Image className="w-full h-full" src={src} alt="image" placeholder="blur" />
                     {index === 0 &&
                         <FloatingTitle className={styles.title}>More than just a room.</FloatingTitle>
                     }

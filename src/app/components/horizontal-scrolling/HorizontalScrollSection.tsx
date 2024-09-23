@@ -40,12 +40,11 @@ const Card = ({
   id: number;
 }) => {
   return (
-    <div key={id} className="flex flex-col items-center gap-2 w-80 md:w-1/3 snap-center shrink-0 px-2">
+    <div key={id} className="flex flex-col items-center gap-2 w-80 md:w-1/3 shrink-0 px-2">
       <Image
         alt={""}
         className="rounded-lg h-[30rem] object-cover"
         src={url}
-        loading="eager"
       />
       <div className="text-xl uppercase font-semibold text-gray-700">
         {title}
