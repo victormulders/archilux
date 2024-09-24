@@ -1,11 +1,11 @@
 "use client";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import LivingRoom from "/public/img/living-room.jpg";
-import RoomOne from "/public/img/room-image-1.webp";
-import RoomTwo from "/public/img/room-image-2.jpeg";
-import RoomFive from "/public/img/living-room-5.jpg";
-import RoomFour from '/public/img/living-room-4.jpg';
+import ClassicRoom from "/public/img/classic-room.jpg";
+import MinimalismRoom from "/public/img/minimalism-room.jpg";
+import ModernRoom from "/public/img/modern-room.jpg";
+import RetroRoom from "/public/img/retro-room.webp";
+import TraditionalRoom from '/public/img/traditional-room.webp';
 import Image, { StaticImageData } from 'next/image';
 
 
@@ -55,28 +55,28 @@ const Card = ({
 
 const cards = [
   {
-    url: LivingRoom,
+    url: ClassicRoom,
     title: "Classic",
     id: 1,
   },
   {
-    url: RoomOne,
+    url: ModernRoom,
     title: "Modernism",
     id: 2,
   },
   {
-    url: RoomTwo,
+    url: TraditionalRoom,
     title: "Traditionalism",
     id: 3,
   },
   {
-    url: RoomFour,
+    url: MinimalismRoom,
     title: "Minimalism",
     id: 4,
   },
   {
-    url: RoomFive,
-    title: "Futuristic",
+    url: RetroRoom,
+    title: "Retro",
     id: 5,
   },
 ];
