@@ -23,7 +23,8 @@ export default function VideoScroll() {
       playsInline
       loop
       preload="true"
-      src="https://videos.pexels.com/video-files/3015493/3015493-sd_640_360_24fps.mp4"
-    ></video>
+    >
+      <source src={"/videos/pool-interior.mp4"} type="video/mp4" />
+    </video>
   );
 }
