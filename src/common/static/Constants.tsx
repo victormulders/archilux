@@ -1,41 +1,54 @@
-import {
-  ChatBubbleLeftRightIcon,
-  ClipboardDocumentCheckIcon,
-  ForwardIcon,
-  IdentificationIcon,
-} from "@heroicons/react/16/solid";
-import React, { ReactElement } from "react";
+import { StaticImageData } from "next/image";
+import ClassicRoom from "/public/img/classic-room.jpg";
+import MinimalismRoom from "/public/img/minimalism-room.jpg";
+import ModernRoom from "/public/img/modern-room.jpg";
+import RetroRoom from "/public/img/retro-room.webp";
+import TraditionalRoom from "/public/img/traditional-room.webp";
 
-interface InformationCard {
+interface Service {
+  id: number;
   title: string;
-  icon: ReactElement;
   description: string;
+  image: StaticImageData;
 }
 
-const informationCards: InformationCard[] = [
+const servicesData: Service[] = [
   {
-    title: "Jouw rijbewijs",
-    icon: <IdentificationIcon className="h-16 w-16 text-primary-500" />,
+    id: 1,
+    title: "Full Home Interior Design",
     description:
-      "Bereid je voor op zelfverzekerd rijden met Autorijschool. Onze toegewijde instructeurs staan klaar om je te begeleiden op de weg naar het behalen van je rijbewijs.",
+      "Our comprehensive full-home interior design service is perfect for those looking to reimagine their entire living space. From concept development to final execution, we’ll work closely with you to design a home that reflects your personality and lifestyle.",
+    image: RetroRoom,
   },
   {
-    title: "Direct contact",
-    icon: <ChatBubbleLeftRightIcon className="h-16 w-16 text-primary-500" />,
+    id: 2,
+    title: "Room-by-Room Design",
     description:
-      "Neem direct contact met ons op bij Autorijschool. We staan paraat om al je vragen te beantwoorden en je te ondersteunen op je reis naar zelfverzekerd rijden.",
+      "If you're focusing on a specific space, our room-by-room design service is for you. Whether it’s a kitchen, living room, or bedroom, we create cohesive designs that enhance functionality and aesthetic appeal.",
+    image: ClassicRoom,
   },
   {
-    title: "Spoedcursus",
-    icon: <ForwardIcon className="h-16 w-16 text-primary-500" />,
+    id: 3,
+    title: "Interior Styling",
     description:
-      "Kies voor de spoedcursus bij Autorijschool en versnel je weg naar het behalen van je rijbewijs. Onze intensieve training is ontworpen om snel en effectief resultaten te behalen.",
+      "Looking to add the finishing touches? Our interior styling service helps to select furnishings, decor, and accessories that breathe life into your space. We specialize in sourcing unique items that reflect your individual style.",
+
+    image: MinimalismRoom,
   },
   {
-    title: "Theorie",
-    icon: <ClipboardDocumentCheckIcon className="h-16 w-16 text-primary-500" />,
+    id: 4,
+    title: "Renovation Consulting",
     description:
-      "Begrijp de essentiële theoretische aspecten van autorijden met Autorijschool. Onze focus op theorie zal je helpen om zelfverzekerd en goed geïnformeerd de weg op te gaan.",
+      "Planning a home renovation? Our expert consultants will guide you through the design and planning process, ensuring that every detail aligns with your vision while maintaining practicality.",
+
+    image: ModernRoom,
+  },
+  {
+    id: 5,
+    title: "Custom Furniture & Lighting",
+    description:
+      "At Archilux, we believe that the right furniture and lighting can elevate a space. We offer custom design solutions for furniture and lighting, ensuring that every element fits seamlessly into your home’s design.",
+    image: TraditionalRoom,
   },
 ];
 
@@ -83,4 +96,4 @@ export interface NavigationItem {
   hasExtraPages?: boolean;
 }
 
-export { faqData, informationCards };
+export { faqData, servicesData };

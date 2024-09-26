@@ -44,6 +44,15 @@ const clientFeedback: ClientFeedback[] = [
     image: RoomFive, // Static image reference
     author: feedbackAuthors[0],
     text: "This company really exceeded my expectations. The team was professional, and the final product was top-notch!",
+  },  {
+    image: RoomTwo,
+    author: feedbackAuthors[1],
+    text: "I had a wonderful experience. Their attention to detail is remarkable, and the customer support was really excellent!",
+  },
+  {
+    image: RoomFive, // Static image reference
+    author: feedbackAuthors[0],
+    text: "This company really exceeded my expectations. The team was professional, and the final product was top-notch!",
   },
 ];
 

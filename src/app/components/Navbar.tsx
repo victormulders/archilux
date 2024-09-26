@@ -16,7 +16,7 @@ import { HomeIcon } from '@heroicons/react/24/solid';
 
 const Navbar = () => {
   const navigation: NavigationItem[] = [
-    { name: "About", slug: "about-us" },
+    { name: "About", slug: "about" },
     { name: "Services", slug: "pricing" },
     { name: "Gallery", slug: "info", hasExtraPages: true },
     // { name: "Rijles", slug: "info", hasExtraPages: true },
