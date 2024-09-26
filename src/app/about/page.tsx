@@ -2,7 +2,14 @@ import PageIntroSection from "@/app/components/PageIntroSection";
 import RoomFive from "/public/img/living-room-5.jpg";
 import { servicesData } from "@/common/static/Constants";
 import Image from "next/image";
-import VideoScroll from "@/app/components/video-scroll/VideoScroll";
+import dynamic from "next/dynamic";
+
+const VideoScroll = dynamic(
+  () => import("@/app/components/video-scroll/VideoScroll"),
+  {
+    ssr: false,
+  },
+);
 
 export default function About() {
   return (
