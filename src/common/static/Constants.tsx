@@ -5,7 +5,7 @@ import ModernRoom from "/public/img/modern-room.jpg";
 import RetroRoom from "/public/img/retro-room.webp";
 import TraditionalRoom from "/public/img/traditional-room.webp";
 
-export const businessName = "Rijschool Newway";
+export const businessName = "Archilux";
 export const businessContactPerson = "Victor Mulders";
 export const businessEmail = "vhgmulders@gmail.com";
 export const businessTel = "+31613110490";
