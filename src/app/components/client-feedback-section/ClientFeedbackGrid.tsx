@@ -15,7 +15,7 @@ export const ClientFeedbackGrid = () => {
   });
 
   return (
-    <div className="py-12 pb-20 md:pb-28 flex md:grid md:grid-cols-3 w-full overflow-x-auto scroll-x snap-x md:container md:snap-none pr-8 md:px-0 gap-8 md:gap-y-16">
+    <div className="py-12 pb-20 md:pb-28 flex md:grid md:grid-cols-3 w-full overflow-x-auto scroll-x snap-x md:container md:snap-none pr-8 md:px-6 gap-8 md:gap-y-16">
       {data?.reviews.map((review, index) => (
         <Link
           href={`/reviews/${review.slug}`}

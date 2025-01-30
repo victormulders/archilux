@@ -8,8 +8,8 @@ const ClientFeedbackSection = () => {
           Explore client feedback on our latest project.
         </h2>
         <hr />
-        <ClientFeedbackGrid />
       </div>
+      <ClientFeedbackGrid />
     </section>
   );
 };
