@@ -1,28 +1,33 @@
 "use client";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import ClassicRoom from "/public/img/classic-room.jpg";
-import MinimalismRoom from "/public/img/minimalism-room.jpg";
-import ModernRoom from "/public/img/modern-room.jpg";
-import RetroRoom from "/public/img/retro-room.webp";
-import TraditionalRoom from '/public/img/traditional-room.webp';
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from "next/image";
+import { CarouselCard, homeCards } from "@/common/static/Constants";
+import Link from "next/link";
 
-
-const HorizontalScrollCarousel = () => {
+const HorizontalScrollCarousel = ({
+  cards,
+  isLarge = false,
+}: {
+  cards: CarouselCard[];
+  isLarge?: boolean;
+}) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["5%", "-95%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh]">
+    <section ref={targetRef} className="relative h-[250vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-0">
+        <motion.div
+          style={{ x }}
+          className="w-auto md:w-full flex gap-0 px-4 md:px-8"
+        >
           {cards.map((card) => {
-            return <Card id={card.id} title={card.title} url={card.url} key={card.id} />;
+            return <Card card={card} key={card.id} isLarge={isLarge} />;
           })}
         </motion.div>
       </div>
@@ -30,55 +35,32 @@ const HorizontalScrollCarousel = () => {
   );
 };
 
-const Card = ({
-  url,
-  title,
-  id,
-}: {
-  url: StaticImageData;
-  title: string;
-  id: number;
-}) => {
+const Card = ({ card, isLarge }: { card: CarouselCard; isLarge: boolean }) => {
   return (
-    <div key={id} className="flex flex-col items-center gap-2 w-80 md:w-1/3 shrink-0 px-2">
-      <Image
-        alt={""}
-        className="rounded-lg h-[30rem] object-cover"
-        src={url}
-      />
-      <div className="text-xl uppercase font-semibold text-gray-700">
-        {title}
+    <Link
+      href={card.pageUrl || ""}
+      key={card.id}
+      target="_top"
+      className="relative group cursor-pointer flex flex-col items-center gap-2 w-80 md:w-1/3 shrink-0 px-2 hover:brightness-100 brightness-75 transition-all"
+    >
+      <div
+        className={`${isLarge ? "xl:h-[50rem]" : "xl:h-[30rem]"} relative h-[30rem] w-full`}
+      >
+        <Image
+          fill
+          alt={card.title}
+          className="rounded-lg object-cover"
+          src={card.url}
+        />
       </div>
-    </div>
+      <div className="text-xl uppercase font-semibold text-gray-700">
+        {card.title}
+      </div>
+      {/*<div className="flex absolute top-0 invisible group-hover:visible">*/}
+      {/*  <p>hallo</p>*/}
+      {/*</div>*/}
+    </Link>
   );
 };
-
-const cards = [
-  {
-    url: ClassicRoom,
-    title: "Classic",
-    id: 1,
-  },
-  {
-    url: ModernRoom,
-    title: "Modernism",
-    id: 2,
-  },
-  {
-    url: TraditionalRoom,
-    title: "Traditionalism",
-    id: 3,
-  },
-  {
-    url: MinimalismRoom,
-    title: "Minimalism",
-    id: 4,
-  },
-  {
-    url: RetroRoom,
-    title: "Retro",
-    id: 5,
-  },
-];
 
 export default HorizontalScrollCarousel;

@@ -5,12 +5,57 @@ import ModernRoom from "/public/img/modern-room.jpg";
 import RetroRoom from "/public/img/retro-room.webp";
 import TraditionalRoom from "/public/img/traditional-room.webp";
 
+export const businessName = "Rijschool Newway";
+export const businessContactPerson = "Victor Mulders";
+export const businessEmail = "vhgmulders@gmail.com";
+export const businessTel = "+31613110490";
+export const businessReadable = "+31 6 1311 0490";
+export const businessAddress = "Kerkendijk 57 01";
+export const businessZipcode = "5482KG";
+export const businessCity = "Schijndel";
+export const businessKVK = "91649161";
+
 interface Service {
   id: number;
   title: string;
   description: string;
   image: StaticImageData;
 }
+
+export interface CarouselCard {
+  url: StaticImageData | string;
+  title: string;
+  id: number;
+  pageUrl?: string;
+}
+
+const homeCards: CarouselCard[] = [
+  {
+    url: ClassicRoom,
+    title: "Classic",
+    id: 1,
+  },
+  {
+    url: ModernRoom,
+    title: "Modernism",
+    id: 2,
+  },
+  {
+    url: TraditionalRoom,
+    title: "Traditionalism",
+    id: 3,
+  },
+  {
+    url: MinimalismRoom,
+    title: "Minimalism",
+    id: 4,
+  },
+  {
+    url: RetroRoom,
+    title: "Retro",
+    id: 5,
+  },
+];
 
 const servicesData: Service[] = [
   {
@@ -96,4 +141,4 @@ export interface NavigationItem {
   hasExtraPages?: boolean;
 }
 
-export { faqData, servicesData };
+export { faqData, servicesData, homeCards };

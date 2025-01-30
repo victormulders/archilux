@@ -12,15 +12,17 @@ import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 import { NavigationItem } from "@/common/static/Constants";
 import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
-import { HomeIcon } from '@heroicons/react/24/solid';
+import { HomeIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const navigation: NavigationItem[] = [
     { name: "About", slug: "about" },
-    { name: "Services", slug: "pricing" },
-    { name: "Gallery", slug: "info", hasExtraPages: true },
+    { name: "Projects", slug: "projects" },
+    { name: "Services", slug: "services" },
+    { name: "References", slug: "reviews" },
+    { name: "Gallery", slug: "gallery" },
     // { name: "Rijles", slug: "info", hasExtraPages: true },
-    { name: "Pricing", slug: "gallery" },
+    // { name: "Pricing", slug: "gallery" },
     // { name: "Contact", slug: "contact" },
   ];
 
@@ -45,7 +47,6 @@ const Navbar = () => {
     controls.start({ y: isScrollingUp ? 0 : "-100%" });
   }, [isScrollingUp]);
 
-
   return (
     <motion.header
       ref={header}
@@ -62,34 +63,34 @@ const Navbar = () => {
                 <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                   <div className="flex gap-4">
                     <Link href="/">
-                        <div className="text-darkTheme flex items-center font-semibold text-xl md:text-2xl">
-                          <HomeIcon className="text-primary-500 mx-2 h-6 md:h-8 w-6 md:w-8" />
-                          Archilux
-                        </div>
+                      <div className="text-darkTheme flex items-center font-semibold text-xl md:text-2xl">
+                        <HomeIcon className="text-primary-500 mx-2 h-6 md:h-8 w-6 md:w-8" />
+                        Archilux
+                      </div>
                     </Link>
                   </div>
 
                   <Disclosure.Button
-                      aria-label="Toggle Menu"
-                      className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-primary-500 focus:text-primary-500 focus:bg-primary-100 focus:outline-none "
+                    aria-label="Toggle Menu"
+                    className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-primary-500 focus:text-primary-500 focus:bg-primary-100 focus:outline-none "
                   >
                     <svg
-                        className="w-6 h-6 fill-current"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
+                      className="w-6 h-6 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
                     >
                       {open && (
-                          <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                          />
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                        />
                       )}
                       {!open && (
-                          <path
-                              fillRule="evenodd"
-                              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                          />
+                        <path
+                          fillRule="evenodd"
+                          d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                        />
                       )}
                     </svg>
                   </Disclosure.Button>
@@ -117,6 +118,7 @@ const Navbar = () => {
                         {navigation.map((menu, index) => (
                           <li className="w-full" key={index}>
                             <Link
+                              target="_top"
                               href={`/${menu.slug}`}
                               onClick={() => close()}
                               className="flex justify-center w-full px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-primary-500 focus:text-primary-500 focus:bg-primary-100 focus:outline-none"

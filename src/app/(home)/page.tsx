@@ -6,11 +6,10 @@ import HorizontalScroll from "@/app/components/horizontal-scrolling/HorizontalSc
 import ZoomParallax from "@/app/components/ZoomParallax";
 import ClientFeedbackSection from "@/app/components/client-feedback-section/ClientFeedbackSection";
 import Faq from "@/app/components/Faq";
-import { HomeIcon } from "@heroicons/react/24/outline";
-import { Input } from "@headlessui/react";
 import LivingRoom from "/public/img/living-room.jpg";
 import RoomFive from "/public/img/living-room-5.jpg";
 import RoomTwo from "/public/img/room-image-2.jpeg";
+import { homeCards } from "@/common/static/Constants";
 
 export default function Home() {
   return (
@@ -34,10 +33,9 @@ export default function Home() {
               With every project we undertake, we are committed to turning
               houses into homes, one design at a time.
             </p>
-            {/*<HeroContent />*/}
             <div className="flex flex-col items-start gap-4 sm:gap-2 sm:items-center sm:flex-row">
               <Link
-                href={"/contact"}
+                href={"/projects"}
                 className="primary-button arrow-button flex w-fit items-center"
               >
                 Explore Our Projects{" "}
@@ -62,40 +60,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/*//TODO hier sideways scroll op zetten?*/}
-      {/*<div className="flex w-full overflow-x-auto scroll-x snap-x">*/}
-      {/*  <div className="flex flex-col items-center gap-2 w-80 snap-center shrink-0 px-4">*/}
-      {/*    <Image*/}
-      {/*      alt={""}*/}
-      {/*      className="rounded-lg h-[30rem] w-80 object-cover"*/}
-      {/*      src={RoomOne}*/}
-      {/*    />*/}
-      {/*    <div className="text-xl uppercase font-semibold text-gray-500">*/}
-      {/*      Classic*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*  <div className="flex flex-col items-center gap-2 w-80 snap-center shrink-0 px-4">*/}
-      {/*    <Image*/}
-      {/*      src={RoomTwo}*/}
-      {/*      alt={""}*/}
-      {/*      className="rounded-lg h-[30rem] w-80 object-cover"*/}
-      {/*    />*/}
-      {/*    <div className="text-xl uppercase font-semibold text-gray-500">*/}
-      {/*      Modern*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*  <div className="flex flex-col items-center gap-2 w-80 snap-center shrink-0 px-4">*/}
-      {/*    <Image*/}
-      {/*      alt={""}*/}
-      {/*      className="rounded-lg h-[30rem] w-80 object-cover"*/}
-      {/*      src={LivingRoom}*/}
-      {/*    />*/}
-      {/*    <div className="text-xl uppercase font-semibold text-gray-500">*/}
-      {/*      Minimalism*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
-      <HorizontalScroll />
+      <HorizontalScroll cards={homeCards} />
 
       <section className="container py-20 md:py-28 grid grid-cols-2 md:grid-cols-4 gap-8">
         <div className="flex flex-col gap-6">
@@ -158,7 +123,7 @@ export default function Home() {
             into homes, one design at a time.
           </p>
           <Link
-            href={"/contact"}
+            href={"/projects"}
             className="primary-button arrow-button flex w-fit items-center"
           >
             Explore Our Projects <ArrowUpRightIcon className="ml-2 h-6 w-6" />
@@ -217,16 +182,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="container pt-20 md:pt-28">
-          <h2 className="max-w-xl mb-4">
-            Explore client feedback on our latest project.
-          </h2>
-          <hr />
-        </div>
-
-        <ClientFeedbackSection />
-      </section>
+      <ClientFeedbackSection />
 
       <section className="flex flex-col md:flex-row container gap-16 md:gap-32 py-20 md:py-28">
         <div className="flex flex-col gap-8">

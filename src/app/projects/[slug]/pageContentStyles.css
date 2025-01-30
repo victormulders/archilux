@@ -1,0 +1,7 @@
+.page-content h1, .page-content h2, .page-content h3, .page-content h4 {
+    @apply mt-4 lg:mt-8;
+}
+
+.page-content p {
+    @apply my-2 lg:my-4;
+}

@@ -24,7 +24,10 @@ export default function VideoScroll() {
       loop
       preload="true"
     >
-      <source src={"/videos/pool-interior.mp4"} type="video/mp4" />
+      <source
+        src="https://scrollyvideo.js.org/goldengate.mp4"
+        type="video/mp4"
+      />
     </video>
   );
 }
