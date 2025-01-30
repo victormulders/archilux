@@ -15,6 +15,7 @@ export const businessZipcode = "5482KG";
 export const businessCity = "Schijndel";
 export const businessKVK = "91649161";
 
+
 interface Service {
   id: number;
   title: string;
