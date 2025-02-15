@@ -1,7 +1,23 @@
+.page-content {
+    @apply max-w-4xl;
+}
+
 .page-content h1, .page-content h2, .page-content h3, .page-content h4 {
-    @apply mt-4 lg:mt-8;
+    @apply my-4 lg:my-8;
+}
+
+img {
+    @apply rounded-lg;
 }
 
 .page-content p {
     @apply my-2 lg:my-4;
+}
+
+table {
+    @apply mt-8;
+
+    td {
+        @apply p-4;
+    }
 }

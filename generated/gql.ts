@@ -14,10 +14,10 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Learn more about it here: https://the-guild.dev/graphql/codegen/plugins/presets/preset-client#reducing-bundle-size
  */
 const documents = {
-    "\nquery ProjectsTitles {\n  projects {\n    slug\n    title\n    image {\n      url\n    }\n  }\n}\n": types.ProjectsTitlesDocument,
+    "\nquery ProjectsTitles {\n  projects {\n    slug\n    title\n    isFeatured\n    image {\n      url\n    }\n  }\n}\n": types.ProjectsTitlesDocument,
     "\n  query GetReviews {\n    reviews {\n      slug\n      title\n      description {\n        html\n      }\n      descriptionPreview\n      authorName\n      authorFunction\n      authorAvatar {\n        url\n      }\n      image {\n        url\n      }\n    }\n  }\n": types.GetReviewsDocument,
     "\n  query GetReviewBySLug($slug: String!) {\n    review(where: { slug: $slug }) {\n      slug\n      title\n      description {\n        html\n      }\n      descriptionPreview\n      authorName\n      authorFunction\n      authorAvatar {\n        url\n      }\n      image {\n        url\n      }\n      createdAt\n    }\n  }\n": types.GetReviewBySLugDocument,
-    "\n  query getProjectBySlug($slug: String!) {\n    project(where: { slug: $slug }) {\n      slug\n      title\n      subtitle\n      isFeatured\n      image {\n        url\n      }\n      content {\n        html\n      }\n      createdAt\n    }\n  }\n": types.GetProjectBySlugDocument,
+    "\n  query getProjectBySlug($slug: String!) {\n    project(where: { slug: $slug }) {\n      slug\n      title\n      subtitle\n      image {\n        url\n      }\n      content {\n        html\n      }\n      createdAt\n    }\n  }\n": types.GetProjectBySlugDocument,
 };
 
 /**
@@ -37,7 +37,7 @@ export function gql(source: string): unknown;
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\nquery ProjectsTitles {\n  projects {\n    slug\n    title\n    image {\n      url\n    }\n  }\n}\n"): (typeof documents)["\nquery ProjectsTitles {\n  projects {\n    slug\n    title\n    image {\n      url\n    }\n  }\n}\n"];
+export function gql(source: "\nquery ProjectsTitles {\n  projects {\n    slug\n    title\n    isFeatured\n    image {\n      url\n    }\n  }\n}\n"): (typeof documents)["\nquery ProjectsTitles {\n  projects {\n    slug\n    title\n    isFeatured\n    image {\n      url\n    }\n  }\n}\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
@@ -49,7 +49,7 @@ export function gql(source: "\n  query GetReviewBySLug($slug: String!) {\n    re
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "\n  query getProjectBySlug($slug: String!) {\n    project(where: { slug: $slug }) {\n      slug\n      title\n      subtitle\n      isFeatured\n      image {\n        url\n      }\n      content {\n        html\n      }\n      createdAt\n    }\n  }\n"): (typeof documents)["\n  query getProjectBySlug($slug: String!) {\n    project(where: { slug: $slug }) {\n      slug\n      title\n      subtitle\n      isFeatured\n      image {\n        url\n      }\n      content {\n        html\n      }\n      createdAt\n    }\n  }\n"];
+export function gql(source: "\n  query getProjectBySlug($slug: String!) {\n    project(where: { slug: $slug }) {\n      slug\n      title\n      subtitle\n      image {\n        url\n      }\n      content {\n        html\n      }\n      createdAt\n    }\n  }\n"): (typeof documents)["\n  query getProjectBySlug($slug: String!) {\n    project(where: { slug: $slug }) {\n      slug\n      title\n      subtitle\n      image {\n        url\n      }\n      content {\n        html\n      }\n      createdAt\n    }\n  }\n"];
 
 export function gql(source: string) {
   return (documents as any)[source] ?? {};

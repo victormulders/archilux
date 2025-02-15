@@ -37,6 +37,7 @@ export default function Home() {
               <Link
                 href={"/projects"}
                 className="primary-button arrow-button flex w-fit items-center"
+                target="_top"
               >
                 Explore Our Projects{" "}
                 <ArrowUpRightIcon className="ml-2 h-6 w-6" />
@@ -125,6 +126,7 @@ export default function Home() {
           <Link
             href={"/projects"}
             className="primary-button arrow-button flex w-fit items-center"
+            target="_top"
           >
             Explore Our Projects <ArrowUpRightIcon className="ml-2 h-6 w-6" />
           </Link>
@@ -166,12 +168,14 @@ export default function Home() {
                 <Link
                   href={"/contact"}
                   className="primary-button arrow-button flex w-fit items-center"
+                  target="_top"
                 >
                   Get in touch <ArrowUpRightIcon className="ml-2 h-6 w-6" />
                 </Link>
                 <Link
                   href={"/contact"}
                   className="secondary-button arrow-button flex w-fit items-center"
+                  target="_top"
                 >
                   Call us +31 6 1311 0490{" "}
                   <ArrowUpRightIcon className="ml-2 h-6 w-6" />
@@ -190,6 +194,7 @@ export default function Home() {
           <Link
             href={"/contact"}
             className="primary-button arrow-button flex w-fit items-center"
+            target="_top"
           >
             Ask Any Question <ArrowUpRightIcon className="ml-2 h-6 w-6" />
           </Link>

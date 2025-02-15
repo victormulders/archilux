@@ -7,6 +7,7 @@ query ProjectsTitles {
   projects {
     slug
     title
+    isFeatured
     image {
       url
     }
@@ -63,7 +64,6 @@ export const GET_PROJECT_BY_SLUG = gql(`
       slug
       title
       subtitle
-      isFeatured
       image {
         url
       }

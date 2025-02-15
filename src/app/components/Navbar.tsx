@@ -62,7 +62,7 @@ const Navbar = () => {
               <>
                 <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                   <div className="flex gap-4">
-                    <Link href="/">
+                    <Link href="/" target="_top">
                       <div className="text-darkTheme flex items-center font-semibold text-xl md:text-2xl">
                         <HomeIcon className="text-primary-500 mx-2 h-6 md:h-8 w-6 md:w-8" />
                         Archilux
@@ -121,7 +121,7 @@ const Navbar = () => {
                               target="_top"
                               href={`/${menu.slug}`}
                               onClick={() => close()}
-                              className="flex justify-center w-full px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-primary-500 focus:text-primary-500 focus:bg-primary-100 focus:outline-none"
+                              className="flex justify-center w-full px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-full  hover:text-primary-500 focus:text-primary-500 focus:bg-primary-100 focus:outline-none"
                             >
                               {menu.name}
                             </Link>
@@ -142,7 +142,8 @@ const Navbar = () => {
                 <li className="mr-3 nav__item" key={index}>
                   <Link
                     href={`/${menu.slug}`}
-                    className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-primary-500 focus:text-primary-500 focus:bg-primary-100 focus:outline-none"
+                    target="_top"
+                    className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-full  hover:text-primary-500 focus:text-primary-500 focus:bg-primary-100 focus:outline-none"
                   >
                     {menu.name}
                   </Link>
@@ -154,6 +155,7 @@ const Navbar = () => {
           <div className="hidden gap-4 lg:flex">
             <Link
               href={"/contact"}
+              target="_top"
               className="primary-button arrow-button flex w-fit items-center"
             >
               Get in touch <ArrowUpRightIcon className="ml-2 h-6 w-6" />

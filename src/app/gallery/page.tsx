@@ -1,7 +1,7 @@
 import { ContactForm } from "@/app/contact/ContactForm";
 import PageTitle from "@/app/components/PageTitle";
 import Image from "next/image";
-import { homeCards } from "@/common/static/Constants";
+import { galleryImages, homeCards } from "@/common/static/Constants";
 
 const GalleryPage = () => {
   return (
@@ -16,7 +16,7 @@ const GalleryPage = () => {
 
       <section className="py-20 md:py-28">
         <div className="columns-1 md:columns-2 xl:columns-3 gap-8 px-6">
-          {homeCards.map((homeCard, index) => (
+          {galleryImages.map((img, index) => (
             <div key={index} className="relative pb-6">
               <Image
                 width={0}
@@ -24,7 +24,7 @@ const GalleryPage = () => {
                 sizes="100vw"
                 style={{ width: "100%", height: "auto" }} // optional
                 className="rounded-lg"
-                src={homeCard.url}
+                src={img}
                 alt="Gallery image"
               />
             </div>

@@ -42,6 +42,7 @@ const ReviewPage = async ({
             <div className="flex flex-col items-start gap-4 sm:gap-2 sm:items-center sm:flex-row">
               <Link
                 href={"/contact"}
+                target="_top"
                 className="primary-button arrow-button flex w-fit items-center"
               >
                 Read more <ArrowDownIcon className="ml-2 h-6 w-6" />

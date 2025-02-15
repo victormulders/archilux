@@ -18,6 +18,7 @@ export default function Footer() {
           <Link
             href={"/contact"}
             className="primary-button arrow-button flex items-center w-fit md:shrink-0 h-fit"
+            target="_top"
           >
             Book An Appointment <ArrowUpRightIcon className="ml-2 h-6 w-6" />
           </Link>
@@ -89,6 +90,7 @@ export default function Footer() {
               <Link
                 href={"/contact"}
                 className="primary-button arrow-button flex w-fit items-center"
+                target="_top"
               >
                 Subscribe
               </Link>

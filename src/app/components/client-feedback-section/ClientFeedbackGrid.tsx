@@ -19,6 +19,7 @@ export const ClientFeedbackGrid = () => {
       {data?.reviews.map((review, index) => (
         <Link
           href={`/reviews/${review.slug}`}
+          target="_top"
           key={index}
           className="group flex flex-col justify-between gap-4 w-80 md:w-full snap-center shrink-0 px-4 md:px-0"
         >

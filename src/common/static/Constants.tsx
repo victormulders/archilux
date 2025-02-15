@@ -4,6 +4,13 @@ import MinimalismRoom from "/public/img/minimalism-room.jpg";
 import ModernRoom from "/public/img/modern-room.jpg";
 import RetroRoom from "/public/img/retro-room.webp";
 import TraditionalRoom from "/public/img/traditional-room.webp";
+import LivingRoom from "/public/img/living-room.jpg";
+import RoomOne from "/public/img/room-image-1.webp";
+import RoomTwo from "/public/img/room-image-2.jpeg";
+import RoomFour from "/public/img/living-room-4.jpg";
+import RoomFive from "/public/img/living-room-5.jpg";
+import RoomSix from "/public/img/living-room-6.jpg";
+import SimpleLivingRoom from "/public/img/simple-living-room.jpg";
 
 export const businessName = "Archilux";
 export const businessContactPerson = "Victor Mulders";
@@ -14,7 +21,6 @@ export const businessAddress = "Kerkendijk 57 01";
 export const businessZipcode = "5482KG";
 export const businessCity = "Schijndel";
 export const businessKVK = "91649161";
-
 
 interface Service {
   id: number;
@@ -27,8 +33,24 @@ export interface CarouselCard {
   url: StaticImageData | string;
   title: string;
   id: number;
+  isFeatured?: boolean;
   pageUrl?: string;
 }
+
+const galleryImages: StaticImageData[] = [
+  ClassicRoom,
+  ModernRoom,
+  RetroRoom,
+  TraditionalRoom,
+  MinimalismRoom,
+  LivingRoom,
+  SimpleLivingRoom,
+  RoomOne,
+  RoomTwo,
+  RoomFour,
+  RoomSix,
+  RoomFive,
+];
 
 const homeCards: CarouselCard[] = [
   {
@@ -142,4 +164,4 @@ export interface NavigationItem {
   hasExtraPages?: boolean;
 }
 
-export { faqData, servicesData, homeCards };
+export { faqData, servicesData, homeCards, galleryImages };

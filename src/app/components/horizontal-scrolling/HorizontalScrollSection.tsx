@@ -53,7 +53,9 @@ const Card = ({ card, isLarge }: { card: CarouselCard; isLarge: boolean }) => {
           src={card.url}
         />
       </div>
-      <div className="text-xl uppercase font-semibold text-gray-700">
+      <div
+        className={`${isLarge ? "text-2xl" : "text-xl"} uppercase font-semibold text-gray-700`}
+      >
         {card.title}
       </div>
       {/*<div className="flex absolute top-0 invisible group-hover:visible">*/}

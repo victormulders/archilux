@@ -1,6 +1,6 @@
 import Image from "next/image";
 import PageIntroSection from "@/app/components/PageIntroSection";
-import RoomFive from "/public/img/living-room-6.jpg";
+import RoomFive from "/public/img/living-room-5.jpg";
 import { Paintbrush, Ruler, Home, Lightbulb, Quote } from "lucide-react";
 import ClientFeedbackSection from "@/app/components/client-feedback-section/ClientFeedbackSection";
 import { CheckIcon } from "@heroicons/react/20/solid";
@@ -41,7 +41,7 @@ export default function ServicesPage() {
       <PageIntroSection title={"Services we provide"} image={RoomFive} />
 
       {/* Services Section */}
-      <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
         <h2 className="text-4xl font-bold text-center mb-8">Our Services</h2>
         <p className="text-lg text-center text-gray-600 max-w-2xl mx-auto mb-12">
           We blend creativity with functionality to craft spaces that reflect
@@ -62,14 +62,14 @@ export default function ServicesPage() {
       </div>
 
       {/* Why Choose Us Section */}
-      <div className="bg-gray-100 py-16">
+      <div className="bg-gray-100 py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <div className="relative w-full h-96 md:w-1/2">
             <Image
               src={RoomOne}
               alt="Luxury Interior Design"
               fill
-              className="object-cover rounded-lg shadow-md"
+              className="object-cover rounded-lg"
             />
           </div>
           <div className="md:w-1/2">

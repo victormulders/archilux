@@ -33,8 +33,13 @@ export default function Projects() {
         title: project.title || "",
         id: index,
         pageUrl: `/projects/${project.slug}`,
+        isFeatured: project.isFeatured,
       }));
-      setProjectCards(cards);
+
+      setProjectCards([
+        ...cards.filter((card) => card.isFeatured),
+        ...cards.filter((card) => !card.isFeatured),
+      ]);
     }
   }, [data]);
 
@@ -91,6 +96,7 @@ export default function Projects() {
           <SectionTitle title={"Still Have Any Questions?"} pretitle="FAQ's" />
           <Link
             href={"/contact"}
+            target="_top"
             className="primary-button arrow-button flex w-fit items-center"
           >
             Ask Any Question <ArrowUpRightIcon className="ml-2 h-6 w-6" />

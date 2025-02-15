@@ -25,7 +25,7 @@ const DynamicPage = async ({
           <div className="relative lg:fixed h-full w-full left-0 top-0">
             <Image
               fill
-              className="object-center object-cover pointer-events-none brightness-75"
+              className="object-center object-cover pointer-events-none brightness-50"
               src={project.image?.url || ""}
               alt={"Living room"}
               priority
@@ -45,6 +45,7 @@ const DynamicPage = async ({
             <div className="flex flex-col items-start gap-4 sm:gap-2 sm:items-center sm:flex-row">
               <Link
                 href={"/contact"}
+                target="_top"
                 className="primary-button arrow-button flex w-fit items-center"
               >
                 Read more <ArrowDownIcon className="ml-2 h-6 w-6" />
