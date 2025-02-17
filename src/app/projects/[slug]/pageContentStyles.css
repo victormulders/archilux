@@ -6,7 +6,7 @@
     @apply my-4 lg:my-8;
 }
 
-img {
+.page-content img {
     @apply rounded-lg;
 }
 

@@ -17,8 +17,8 @@ export const businessContactPerson = "Victor Mulders";
 export const businessEmail = "vhgmulders@gmail.com";
 export const businessTel = "+31613110490";
 export const businessReadable = "+31 6 1311 0490";
-export const businessAddress = "Kerkendijk 57 01";
-export const businessZipcode = "5482KG";
+export const businessAddress = "Hoofdstraat 1";
+export const businessZipcode = "5481TK";
 export const businessCity = "Schijndel";
 export const businessKVK = "91649161";
 
