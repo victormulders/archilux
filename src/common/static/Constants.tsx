@@ -20,7 +20,7 @@ export const businessReadable = "+31 6 1311 0490";
 export const businessAddress = "Hoofdstraat 1";
 export const businessZipcode = "5481TK";
 export const businessCity = "Schijndel";
-export const businessKVK = "91649161";
+export const businessKVK = "12345678";
 
 interface Service {
   id: number;
